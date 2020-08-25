@@ -9,6 +9,11 @@ console.log(path.join(__dirname, "../public"));
 const publicDir = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
+
+//Use PORT from Heroku
+
+const port = process.env.PORT || 3000
+
 const bootstrapPath = path.join(
   __dirname,
   "../node_modules/bootstrap/dist/css"
@@ -90,6 +95,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen("3000", () => {
+app.listen(port, () => {
   console.log("Server is up!");
 });
