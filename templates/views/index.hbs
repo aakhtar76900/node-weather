@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    {{>header}}
+    <div class="container">
+
+        <form class="mt-3">
+            <div class="form-group">
+                <label for="inputLocation">Location</label>
+                <input type="text" class="form-control" id="inputLocation" placeholder="Enter Location">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+<p id="message-1"></p>
+<p id="message-2"></p>
+
+    </div>
+
+
+
+    {{>footer}}
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
