@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
-const chalk = require("chalk");
 const geocoding = require("./utils/geocoding");
 const currentWeather = require('./utils/currentWeather')
 
@@ -82,7 +81,6 @@ app.get("/help/*", (req, res) => {
 });
 
 app.get("/products", (req, res) => {
-  console.log(chalk.green(req.query.search));
 
   res.send({
     name: "Kimi",
